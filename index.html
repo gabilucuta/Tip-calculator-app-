@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { margin-top: 10%; font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main class="main">
+ <div class="firstContainer">
+   <div class="text bill">Bill</div>
+   <i class="money icon"></i>
+  <input id="bill" type="number" placeholder="0">
+  <div class="text select">Select Tip %</div>
+  <div class="selector">
+      <label class="container">
+        <input class="select" onclick="calculator()" type="radio"  name="radio" value="5">
+        <span class="checkmark">5%</span>
+      </label>
+      <label class="container">
+        <input class="select" onclick="calculator()" type="radio" name="radio" value="10">
+        <span class="checkmark">10%</span>
+      </label>
+      <label  class="container">
+        <input class="select" onclick="calculator()" type="radio" name="radio" value="15">
+        <span class="checkmark">15%</span>
+      </label>
+      <label class="container">
+      <input class="select" onclick="calculator()" type="radio" name="radio" value="25"><span class="checkmark">25%</span>
+      
+      </label>
+      <label class="container">
+        <input class="select" onclick="calculator()" type="radio" name="radio" value="50">
+        <span class="checkmark">50%</span>
+      </label>
+      <label class="container custom">
+        <input class="select" onclick="calculator()"  type="radio" name="radio" value="custom.value" placeholder="custom"><input onkeypress="calculator()" id="custom" class="custom" type="text" value="0" placeholder="Custom">
+      </label>
+  </div>
+
+
+  <div class="text number">Number of People <span id="error" class="error">Can't be zero</span> </div>
+  <i class="people icon"></i>
+  <input id="number" type="number" placeholder="0">
+  </div>
+
+  <div class="secondContainer">
+ <div class="total">
+    <div class="tipAmount">
+      <p class="tip totl">Tip Amount</p>
+      <p class="person"> / person</p>
+    </div>
+    <div class="calcTip">
+      <p id="tiperPerson" class="tipCalc tipcal">$0.00</p>
+    </div>
+    </div>
+  <div class="total">
+      <div class="totalAmount">
+        <p class="tot totl">Total</p>
+        <p class="person"> / person</p>
+        </div>
+      <div class="totalCalc">
+      <p id="perPerson" class="totCalc tipcal">$0.00</p>
+
+      </div>
+
+    </div>
+    <button id="reset-btn" onclick="myReset()" class="reset" type="reset">RESET</button>
+    </div>
+      
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  
+</body>
+</html>
